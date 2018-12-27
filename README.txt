@@ -10,7 +10,7 @@ Back end: C#
 Razor syntax
 LINQ (Language Integrated Query) with the Method Syntax or Query Syntax to access DataBase
 Front end:JavaScript,HTML,CSS
-Libraries: JQUERY
+Libraries: jQuery
 
 
 
