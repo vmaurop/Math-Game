@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4ea68706859949e29271996eca25ef7a" Name="Diagram1">
+        <EntityTypeShape EntityType="UserDatabaseModel.Level_1" Width="1.5" PointX="5.875" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDatabaseModel.Level_2" Width="1.5" PointX="6.125" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDatabaseModel.Level_3" Width="1.5" PointX="6.625" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDatabaseModel.Level_4" Width="1.5" PointX="3.625" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDatabaseModel.Level_5" Width="1.5" PointX="6.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDatabaseModel.User" Width="1.5" PointX="0.625" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="UserDatabaseModel.FK__Level_1__UserId__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDatabaseModel.FK__Level_2__UserId__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDatabaseModel.FK__Level_3__UserId__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDatabaseModel.FK__Level_4__UserId__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDatabaseModel.FK__Level_5__UserId__5812160E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

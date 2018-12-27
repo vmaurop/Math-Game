@@ -1,0 +1,41 @@
+﻿@model Statistics.Models.User
+@{
+    ViewBag.Title = "Statistics";
+}
+
+
+<title>Statistics Calculator</title>
+
+<br>
+<br>
+							
+<center>
+    <div class="mypanel">
+        <p><strong><font size="5">Basic Statistics Calculator</font></strong></p>
+        <br>
+        <form name="statistics" id="myStat">
+            <textarea id="data" rows="5" cols="30" placeholder="Enter data split with coma (eg 1,2,3,4)"></textarea>
+
+            <br>
+            <br>
+            <button class="button" type="button" onclick="Statistics()">Calculate</button>
+            <button class="button" type="reset" onclick="Clear()">Reset</button>
+            <br>
+            <br>
+        </form>
+        <br>
+        <div id="results">
+            <p id="max">  <br>
+            <p id="min">  <br>
+            <p id="count">  <br>
+            <p id="sum">  <br>
+            <p id="average"><br>
+            <p id="median"> <br>
+            <p id="mode"><br>
+            <p id="variance"> <br>
+            <p id="standard_deviation">
+        </div>
+        <br>
+    </div>
+</center>
+

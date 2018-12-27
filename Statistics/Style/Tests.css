@@ -1,0 +1,68 @@
+﻿.circle {
+    display: table-cell;
+    height: 120px;
+    width: 120px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: green;
+    color: #fff;
+    font: 18px "josefin sans", arial;
+}
+
+#level1 {
+    position: absolute;
+    top: 20%; /*[wherever you want it]*/
+    left: 50%;
+}
+
+#level2 {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+}
+
+#level3 {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+}
+
+#level4 {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+}
+
+#level5 {
+    position: absolute;
+    top: 100%;
+    left: 65%;
+}
+
+.Certificate {
+/*  background-color: lightgrey;
+    width: 150px;
+    border: 5px solid green;
+    padding: 25px;
+    margin: 25px;
+    */
+    position: absolute;
+    left: 50%;
+    top: 140%;
+    color:cornflowerblue;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    padding: 10px;
+    width: 100px;
+}
+
+    .button:hover {
+        background-color: #3B5998;
+        color: white;
+    }

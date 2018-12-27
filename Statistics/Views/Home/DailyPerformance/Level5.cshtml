@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Level5";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    Statistics.Models.UserDatabaseEntities showPerformance = new Statistics.Models.UserDatabaseEntities();
+    var userId = Session["UserId"].ToString();
+    var performance = showPerformance.Level_5.Where(a => a.UserId.ToString() == userId)
+                                           .Select(s => new
+                                           {
+                                               score = s.Score,
+                                               date = s.Date
+                                           });
+
+    var myChart = new Chart(width: 800, height: 600)
+    .AddTitle("")
+    .AddSeries(chartType: "Column",
+       xValue: performance, xField: "date",
+       yValues: performance, yFields: "score")
+    .AddLegend("Daily Performnce Level5")
+    .SetYAxis("score", 0, 10)
+    .Write();
+
+}

@@ -1,0 +1,141 @@
+﻿@{
+    Layout = "~/Views/Tests/PackageOfTests/_LayoutPageTests.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Level-1</title>
+</head>
+<body>
+    <h1 align="center" style="color:green;">Tets Level 1</h1>
+    <br>
+    <br>
+    <br>
+    <form id="Test2"  method="post" runat="server">
+        <div class="questions">
+
+            <div class="question1">
+                <br><b>
+                    A card is chosen at random from a pack of 52 playing cards.
+                    What is the probability of a King or a Queen?
+                </b>
+                <div class="answers1">
+                    <div class="answer1">
+                        <input type="radio" name="question-1-answers-A" id="1-A" value="A" />
+                        <label for="question-1-answers-A">2/13</label>
+                    </div>
+                    <div class="answer2">
+                        <input type="radio" name="question-1-answers-B" id="1-B" value="B" />
+                        <label for="question-1-answers-B">1/2</label>
+                    </div>
+                    <div class="answer3">
+                        <input type="radio" name="question-1-answers-C" id="1-C" value="C" />
+                        <label for="question-1-answers-C">1/52</label>
+                    </div>
+                    <div class="answer4">
+                        <input type="radio" name="question-1-answers-D" id="1-D" value="D" />
+                        <label for="question-1-answers-D">1/26</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="question2">
+                <br><b>Which of the following pairs of events is mutually exclusive?</b>
+                <div class="answers2">
+                    <div class="answer1">
+                        <input type="radio" name="question-2-answers-A" id="2-A" value="A" />
+                        <label for="question-2-answers-A">Run backwards and forwards at the same time</label>
+                    </div>
+                    <div class="answer2">
+                        <input type="radio" name="question-2-answers-B" id="2-B" value="B" />
+                        <label for="question-2-answers-B">Two dice: Odd and even</label>
+                    </div>
+                    <div class="answer3">
+                        <input type="radio" name="question-2-answers-C" id="2-C" value="C" />
+                        <label for="question-2-answers-C">Sit down and listen music</label>
+                    </div>
+                    <div class="answer4">
+                        <input type="radio" name="question-2-answers-D" id="2-D" value="D" />
+                        <label for="question-2-answers-D">Cards: Aces and Spades</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="question3">
+                <br><b>A die is thrown once. What is the probability that the score is odd but not 3?</b>
+                <div class="answers3">
+                    <div class="answer1">
+                        <input type="radio" name="question-3-answers-A" id="3-A" value="A" />
+                        <label for="question-3-answers-A">1/3</label>
+                    </div>
+                    <div class="answer2">
+                        <input type="radio" name="question-3-answers-B" id="3-B" value="B" />
+                        <label for="question-3-answers-B">1/2</label>
+                    </div>
+                    <div class="answer3">
+                        <input type="radio" name="question-3-answers-C" id="3-C" value="C" />
+                        <label for="question-3-answers-C">2/3</label>
+                    </div>
+                    <div class="answer4">
+                        <input type="radio" name="question-3-answers-D" id="3-D" value="D" />
+                        <label for="question-2-answers-D">0</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="question4">
+                <br><b>If P(A)= 4/5.What is the value of P(A')?</b>
+                <div class="answers4">
+                    <div class="answer1">
+                        <input type="radio" name="question-4-answers-A" id="4-A" value="A" />
+                        <label for="question-2-answers-A">1/5</label>
+                    </div>
+                    <div class="answer2">
+                        <input type="radio" name="question-4-answers-B" id="4-B" value="B" />
+                        <label for="question-2-answers-B">2/5</label>
+                    </div>
+                    <div class="answer3">
+                        <input type="radio" name="question-4-answers-C" id="4-C" value="C" />
+                        <label for="question-2-answers-C">1/3</label>
+                    </div>
+                    <div class="answer4">
+                        <input type="radio" name="question-4-answers-D" id="4-D" value="D" />
+                        <label for="question-2-answers-D">1/4</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question5">
+                <br><b>What is the population standard deviation for the numbers: 11,18,235,192,-10,-102?</b>
+                <div class="answers5">
+                    <div class="answer1">
+                        <input type="radio" name="question-5-answers-A" id="5-A" value="A" />
+                        <label for="question-5-answers-A">117.84</label>
+                    </div>
+                    <div class="answer2">
+                        <input type="radio" name="question-5-answers-B" id="5-B" value="B" />
+                        <label for="question-5-answers-B">171.78</label>
+                    </div>
+                    <div class="answer3">
+                        <input type="radio" name="question-5-answers-C" id="5-C" value="C" />
+                        <label for="question-5-answers-C">-104.71</label>
+                    </div>
+                    <div class="answer4">
+                        <input type="radio" name="question-5-answers-D" id="5-D" value="D" />
+                        <label for="question-5-answers-D">181.2</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <input type="submit" onclick="validateTest();" value="submit" name="submit" class="button"/> 
+        <input type="reset" value="Reset" class="button"/>
+    </form>
+</body>
+</html>

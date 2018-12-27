@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/scripts/getInRandomOrderQuestionsAndAnswers.js"></script>
+    <script src="~/scripts/validateTests.js"></script>
+    <link rel="stylesheet" href="~/Style/Tests.css" />
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @{
+
+        if (!Request["submit"].IsEmpty())
+        {
+            string url = Request.Url.ToString();
+            var count = 0;
+            for (int i = 0; i < 6; i++)
+            {
+                if (!Request["question-" + i + "-answers-A"].IsEmpty())
+                {
+                    count++;
+                }
+            }
+            Statistics.Models.UserDatabaseEntities context = new Statistics.Models.UserDatabaseEntities();
+            var isCompleted = false;
+            if (2 * count > 5)
+            {
+                isCompleted = true;
+            }
+            if (url.Contains("Level1"))
+            {
+                var author1 = new Statistics.Models.Level_1 { Score = 2 * count, Completed = isCompleted, UserId = (int)Session["UserId"], Date = DateTime.UtcNow.Date };
+                context.Level_1.Add(author1);
+                context.SaveChanges();
+            }
+            if (url.Contains("Level2"))
+            {
+                var author2 = new Statistics.Models.Level_2 { Score = 2 * count, Completed = isCompleted, UserId = (int)Session["UserId"], Date = DateTime.UtcNow.Date };
+                context.Level_2.Add(author2);
+                context.SaveChanges();
+            }
+            if (url.Contains("Level3"))
+            {
+                var author3 = new Statistics.Models.Level_3 { Score = 2 * count, Completed = isCompleted, UserId = (int)Session["UserId"], Date = DateTime.UtcNow.Date };
+                context.Level_3.Add(author3);
+                context.SaveChanges();
+            }
+            if (url.Contains("Level4"))
+            {
+                var author4 = new Statistics.Models.Level_4 { Score = 2 * count, Completed = isCompleted, UserId = (int)Session["UserId"], Date = DateTime.UtcNow.Date };
+                context.Level_4.Add(author4);
+                context.SaveChanges();
+            }
+            if (url.Contains("Level5"))
+            {
+                var author5 = new Statistics.Models.Level_5 { Score = 2 * count, Completed = isCompleted, UserId = (int)Session["UserId"], Date = DateTime.UtcNow.Date };
+                context.Level_5.Add(author5);
+                context.SaveChanges();
+            }
+
+            Response.Redirect("~/Tests/Main");
+        }
+    }
+
+
+
+
+</body>
+</html>

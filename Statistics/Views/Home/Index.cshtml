@@ -1,0 +1,140 @@
+﻿@model Statistics.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<title>Home</title>
+
+
+<div id="BasicStatistics">
+
+    <br>
+    <h3>Minimum</h3>
+
+    <p>The smallest value in a sample data set</p>
+    <p> Assume that we have values separated by commas such as 3, 1, 5, 9, 7,82, 2, 4, 5</p>
+    <p><b>Minimum</b> value is <b>1</b></p>
+
+
+    <h3>Maximum</h3>
+    <p>The largest value in a sample data set:  5,8,7,12,22,3,2<p>
+    <p><b>Maximum</b> value is <b>22</b></p>
+
+    <h3>Sum</h3>
+    <p>The total of all data values</p>
+    <p> sum = (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> + ... + x<sub>n</sub>) </p>
+    <p>Data set: 5,7,9,2,-1,2</p>
+    <p><b>Sum</b> = 5+7+9+2+(-1)+2 = 24</p>
+
+
+    <h3>Count</h3>
+    <p>The total number of data values in a data set</p>
+    <p>Data set: 4,4,2,11,1
+    <p><b>Count</b> = 5</p>
+
+    <h3>Mean</h3>
+    <p>The sum of all of the data divided by the count</p>
+    <p>Data set: 3,2,-1,-3,9</p>
+    <p> Sum = 10, Count = 5</p>
+    <p><b>Mean</b> = 2 </p>
+
+    <div id="mean">
+        <nobr>
+            <p style="display:inline">
+                &mu; =
+                <table class="inlinetable">
+                    <tbody>
+                        <tr><td>&sum;x<sub>i</sub></td></tr>
+                        <tr><td bgcolor="#000000" height="1"></td></tr>
+                        <tr><td>n</td></tr>
+                    </tbody>
+                </table>
+                ,&nbsp;&nbsp;  i &isin; <span style="font-size:25px;">&#8469;</span>
+            </p>
+        </nobr>
+    </div>
+
+
+
+    <h3>Median</h3>
+    <p>The middle of a group of numbers sorted in ascending order. It is the number that is right in the middle</p>
+
+    <ul>
+        <li>Count of numbers odd</li>
+        <br>
+        <p>Data set : 4,57,8,9,-2,</p>
+        <p>We set the numbers in ascending order, -2,1,<b>8</b>,9,57
+        <p>
+        <p><b>Median</b>= 8 </p>
+        <li>Count of numbers even</li>
+        <br>
+        <p>Data set : 10,0,4,1,19,21</p>
+        <p>We set the numbers in ascending order, 0,1,<b>4,10</b>,19,21
+        <p>
+        <p><b>Median</b>= (4+10)/2 = 7 </p>
+    </ul>
+
+    <h3>Mode</h3>
+
+    <p>The value or values that occur most frequently in the data set</p>
+    <p>Data set: 8,2,8,-3,2,11,8,100</p>
+    <p> value 8 occur 3 times</p>
+    <p><b>Mode</b> = 8 </p>
+
+
+    <h3>Variance</h3>
+    <p>The sum of the squared differences between data values and the mean,  divided by the count<p>
+    <p>Data set: 3,2,-1,-3,9</p>
+    <p>sum = 10, count = 5 , mean = 2
+    <p>Var = [(3-2)<sup>2</sup>+(2-2)<sup>2</sup>+(-1+2)<sup>2</sup>+(-3+2)<sup>2</sup>+(9-2)<sup>2</sup>]/5</p>
+    <p><b>Variance</b> = 16.22 </p>
+
+    <div id="var">
+        <nobr>
+            <p style="display:inline">
+                Var(X) = s<sup>2</sup> =
+                <table class="inlinetable">
+                    <tbody>
+                        <tr><td>&sum;(x<sub>i</sub>-&mu;)<sup>2</sup></td></tr>
+                        <tr><td bgcolor="#000000" height="1"></td></tr>
+                        <tr align="center"><td>n</td></tr>
+                    </tbody>
+                </table>
+                ,&nbsp;&nbsp;  i &isin; <span style="font-size:25px;">&#8469;</span>
+            </p>
+        </nobr>
+    </div>
+
+
+
+    <h3>Standard Deviation (s)</h3>
+
+    <p> The square root of the variance<p>
+
+        <div id="sd">
+    <p>
+        <span style="white-space: nowrap; font-size:larger">
+            s = &radic;<span style="text-decoration:overline;">&nbsp;var(x)&nbsp;</span>
+        </span>
+    </p>
+</div>
+<p>In the above example we have variance = 16.22</p>
+<p>
+    Standard Deviation(s) =   <span style="white-space: nowrap; font-size:larger">
+        &radic;<span style="text-decoration:overline;">&nbsp;16.22&nbsp;</span>
+    </span> = 4.03 (rounding to hundredths)
+
+
+    <br>
+
+    <br>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+

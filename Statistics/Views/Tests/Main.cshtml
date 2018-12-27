@@ -1,0 +1,52 @@
+﻿@Html.Raw(TempData["msg"])
+@{
+    ViewBag.Title = "Tests";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/scripts/getInRandomOrderQuestionsAndAnswers.js"></script>
+    <script src="~/scripts/validateTests.js"></script>
+    <link rel="stylesheet" href="~/Style/Tests.css" />
+</head>
+
+
+<div id="level1">
+    <div class="circle" onclick="location.href='@Url.Action("TestLevel1", "Tests")'">
+        <p>Level 1</p>
+    </div>
+</div>
+<div id="level2">
+    <div class="circle" onclick="location.href='@Url.Action("TestLevel2", "Tests")'">
+        <p>Level 2</p>
+    </div>
+</div>
+<div id="level3">
+    <div class="circle" onclick="location.href='@Url.Action("TestLevel3", "Tests")'">
+        <p>Level 3<p>
+    </div>
+</div>
+<div id="level4">
+    <div class="circle" onclick="location.href='@Url.Action("TestLevel4", "Tests")'">
+        <p>Level 4</p>
+    </div>
+</div>
+<div id="level5" onclick="location.href='@Url.Action("TestLevel5", "Tests")'">
+    <div class="circle">
+        <p>Level 5</p>
+    </div>
+    <br>
+</div>
+
+<div class="Certificate" onclick="location.href='@Url.Action("CertifiedUsers", "Home")'">
+    <div class="circle">
+        <p>Certificate</p>
+    </div>
+</div>
+
+
+<br>
+<br>

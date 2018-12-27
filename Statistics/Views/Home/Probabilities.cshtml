@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Probabilities";
+}
+
+
+<title>Probabilities</title>
+
+<div id="probabilities">
+    <br>
+    <h4>Tosing a coin</h4>
+    <p>
+        When a coin is tossed, there are two possible outcomes:
+        <ul>
+            <li> heads (H)</li>
+            <li> tails (T)</li>
+        </ul>
+    </p>
+    <p>We say that the probability of the coin heads landing is 50% or 1/2</p>
+    <p>And the probability of the coin landing tails is 50% or 1/2</p>
+    <h4>Throwing Dice </h4>
+    <p>
+        When a single die is thrown, there are six possible outcomes: 1, 2, 3, 4, 5, 6
+    </p>
+    <p>We say that the probability of any one of them is  1/6</p>
+    <br>
+    <p> So, in general we can say that</p>
+    <div id="ProbabilityOfEvent">
+        <nobr>
+            <p style="display:inline">
+                Probability of an event happening =
+                <table class="inlinetable">
+                    <tbody>
+                        <tr><td>Number of ways it can happen</td></tr>
+                        <tr><td bgcolor="#000000" height="1"></td></tr>
+                        <tr><td>Total number of outcomes</td></tr>
+                    </tbody>
+                </table>
+            </p>
+        </nobr>
+    </div>
+    <br>
+    <p><strong>For any event A, apply that: 0 &le; P(A) &le;1</strong></p>
+    <p>Probability is the measure of the likelihood of an event occurring. It is quantified as a number between 0 and 1, with 1 signifying certainty, and 0 signifying that the event cannot occur. It follows that the higher the probability of an event, the more certain it is that the event will occur. In its most general case, probability can be defined numerically as the number of desired outcomes divided by the total number of outcomes. This is further affected by whether the events being studied are independent, mutually exclusive, or conditional, among other things. The calculator provided computes the probability that an event A or B does not occur, the probability A and/or B occur when they are not mutually exclusive, the probability that both event A and B occur, and the probability that either event A or event B occurs, but not both. </p>
+    <br>
+    <br>
+    <h2 align="center">Probability of Two Events</h2>
+    <h3>Complement of A and B</h3>
+    <p>Given a probability A, denoted by P(A), it is simple to calculate the complement, or the probability that the event described by P(A) does not occur, P(A'). If for example P(A) = 0.25 represents the probability that tomorrow is going to rain, we can say that the probability tomorrow not raining is: </p>
+    <p align="center">
+        P(A') = 1 - P(A) = 1 - 0.25 = 0.75
+        <br>
+        <br>
+        <img src="~/Images/complement.png" class="img-rounded" width="135" height="110">
+    </p>
+    <p>Given this scenario, there is therefore a 75% chance that tomorrow will not rain. Any P(B') would be calculated in the same manner, and it is worth noting that in the calculator above, can be independent, if P(A) = 0.75, P(B) does not necessarily have to equal 0.25, it could be everything between 0 and 1</p>
+
+    <h3>Intersection of A and B</h3>
+    <p>The probability A ∩ B, read "A-cut B" or "A and B", is performed when A and B are simultaneously executed.</p>
+    <p align="center">
+        P(A&#8745;B)
+        <br>
+        <br>
+        <img src="~/Images/intersection.png" class="img-rounded" width="135" height="110">
+    </p>
+    <p><strong>Mutually exclusive events</strong></p>
+    <p>
+        In throwing a dice if A is the probability of bringing an even number, and B being able to bring an odd number, we have A = {2,4,6} and B = {1,3,5}. We notice that A and B can not be made at the same time, since they have no common elements. In this case, A and B are said to be incompatible. General: Two contingencies A and B are called incompatible when A ∩ B = &empty;
+    </p>
+    <p>P(A&#8745;B) = 0</p>
+    <p><strong>Indipendent A and B (Not mutually exclusive events)</strong></p>
+    <p>
+        In throwing two dices if A is the probability of bringing an even number, and B being able to bring an odd number, we have A = {2,4,6} and B = {1,3,5}. We notice that A and B can be made at the same time. In this case, A and B are said to be independent. P(A) = 3/6, P(B) = 3/6
+    </p>
+    <p>P(A&#8745;B) = P(A)*P(B) = 0.5*0.5 = 0.25</p>
+    <p>
+        This means that we have probability 25% to bring the same time with one dice even number and with another dice odd number
+    </p>
+    <p><strong>Conditional probability</strong></p>
+    <p>The calculator provided considers the case where the probabilities are independent. Calculating the probability is slightly more involved when the events are dependent, and involves an understanding of conditional probability, or the probability of event A given that event B has occurred, P(A|B). Take the example of a bag of 15 balls, 5 of which are black, and 7 of which are blue. Calculate the probability of drawing a black ball if a blue ball has been withdrawn without replacement (the blue ball is removed from the bag, reducing the total number of balls in the bag):</p>
+    <p>Probability of drawing a blue ball:</p>
+    <p align="center">P(A) = 5/15</p>
+    <p>Probability of drawing a black ball:</p>
+    <p align="center">P(B) = 7/15</p>
+    <p>Probability of drawing a black marble given that a blue ball was drawn at first:</p>
+    <p align="center">P(B|A) = 7/14</p>
+    <p>As can be seen, the probability that a black ball is drawn is affected by any previous event where a black or blue ball was drawn without replacement. Thus, if a person wanted to determine the probability of withdrawing a blue and then black ball from the bag: </p>
+    <p>Probability of drawing a blue and then black marble using the probabilities calculated above:</p>
+    <p align="center">P(A ∩ B) = P(A) × P(B|A) = (5/15) × (7/14) = 1/6</p>
+    <h3>Union of A and B</h3>
+    The probability A U B, read "A compound B" or "A or B", is performed when at least one of A, B is performed</p>
+
+    <p align="center">
+        P(A&cup;B)
+        <br>
+        <br>
+        <img src="~/Images/union.png" class="img-rounded" width="135" height="110">
+    </p>
+    <p>P(A&cup;B) = P(A) + P(B) - P(A ∩ B)</p>
+    <p>The events are either mutually exclusive, or the events are not mutually exclusive. In the case where the events are mutually exclusive, P(A ∩ B) = 0</p>
+    <p>A basic example of mutually exclusive events would be the rolling of a dice where event A is the probability that an even number is rolled, and event B is the probability that an odd number is rolled. It is clear in this case that the events are mutually exclusive since a number cannot be both even and odd, so P(A U B) would be  P(A) + P(B) = 3/6 + 3/6 = 1, since a standard dice only has odd and even numbers. </p>
+    <p>The calculator above computes the other case, where the events A and B are not mutually exclusive. In this case:</p>
+    <p>Using the example of rolling a dice again, find the probability that an even number or a number that is greater than 4. Here the set is represented by the 6 values of the dice, written as:</p>
+    <table align="center">
+        <tbody>
+            <tr><td>&nbsp;</td><td>Ω = {1,2,3,4,5,6}</td></tr>
+            <tr><td>Probability of an even number:</td><td> Α = {2,4,6}, P(A) = 3/6</td></tr>
+            <tr><td>Probability of greater than 4:</td><td>Β = {5,6}, P(B) = 2/6</td></tr>
+            <tr><td>Intersection of A and B: </td><td>A ∩ B = {6}, P(A ∩ B) = 1/6</td></tr>
+            <tr><td>&nbsp;</td><td>P(A ∩ B) = 3/6 + 2/6 -1/6 = 2/3</td></tr>
+        </tbody>
+    </table>
+    <br>
+</div>
+<br>
+<br>

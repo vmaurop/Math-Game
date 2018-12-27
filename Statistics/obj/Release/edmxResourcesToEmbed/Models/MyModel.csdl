@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UserDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Level_1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Level_1__UserId__25869641" FromRole="Level_1" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Level_2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Level_2__UserId__403A8C7D" FromRole="Level_2" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Level_3">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Level_3__UserId__48CFD27E" FromRole="Level_3" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Level_4">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Level_4__UserId__4F7CD00D" FromRole="Level_4" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Level_5">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Score" Type="Int32" Nullable="false" />
+    <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Level_5__UserId__5812160E" FromRole="Level_5" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Level_1" Relationship="Self.FK__Level_1__UserId__25869641" FromRole="User" ToRole="Level_1" />
+    <NavigationProperty Name="Level_2" Relationship="Self.FK__Level_2__UserId__403A8C7D" FromRole="User" ToRole="Level_2" />
+    <NavigationProperty Name="Level_3" Relationship="Self.FK__Level_3__UserId__48CFD27E" FromRole="User" ToRole="Level_3" />
+    <NavigationProperty Name="Level_4" Relationship="Self.FK__Level_4__UserId__4F7CD00D" FromRole="User" ToRole="Level_4" />
+    <NavigationProperty Name="Level_5" Relationship="Self.FK__Level_5__UserId__5812160E" FromRole="User" ToRole="Level_5" />
+  </EntityType>
+  <Association Name="FK__Level_1__UserId__25869641">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Level_1" Type="Self.Level_1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Level_1">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Level_2__UserId__403A8C7D">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Level_2" Type="Self.Level_2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Level_2">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Level_3__UserId__48CFD27E">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Level_3" Type="Self.Level_3" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Level_3">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Level_4__UserId__4F7CD00D">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Level_4" Type="Self.Level_4" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Level_4">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Level_5__UserId__5812160E">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Level_5" Type="Self.Level_5" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Level_5">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UserDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Level_1" EntityType="Self.Level_1" />
+    <EntitySet Name="Level_2" EntityType="Self.Level_2" />
+    <EntitySet Name="Level_3" EntityType="Self.Level_3" />
+    <EntitySet Name="Level_4" EntityType="Self.Level_4" />
+    <EntitySet Name="Level_5" EntityType="Self.Level_5" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK__Level_1__UserId__25869641" Association="Self.FK__Level_1__UserId__25869641">
+      <End Role="User" EntitySet="User" />
+      <End Role="Level_1" EntitySet="Level_1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Level_2__UserId__403A8C7D" Association="Self.FK__Level_2__UserId__403A8C7D">
+      <End Role="User" EntitySet="User" />
+      <End Role="Level_2" EntitySet="Level_2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Level_3__UserId__48CFD27E" Association="Self.FK__Level_3__UserId__48CFD27E">
+      <End Role="User" EntitySet="User" />
+      <End Role="Level_3" EntitySet="Level_3" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Level_4__UserId__4F7CD00D" Association="Self.FK__Level_4__UserId__4F7CD00D">
+      <End Role="User" EntitySet="User" />
+      <End Role="Level_4" EntitySet="Level_4" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Level_5__UserId__5812160E" Association="Self.FK__Level_5__UserId__5812160E">
+      <End Role="User" EntitySet="User" />
+      <End Role="Level_5" EntitySet="Level_5" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
