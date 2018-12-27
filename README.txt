@@ -1,21 +1,21 @@
 # Math-Game
-Interactive Math Tutorial Statistics-Probailities
+Interactive Math Tutorial Statistics-Probabilities
 
 IDE:Microsoft Visual Studio Enterprise 2015
 
 Architectural pattern: framework ASP.NET MVC(Model-View-Controller ) 
-Entinty Framework 6.2.0
-RDMS: Microsoft SQL server (T-SQL)
-Back end: C#
+Entity  Framework 6.2.0
+RDMS: Microsoft SQL Server (T-SQL)
+Back-end: C#
 Razor syntax
 LINQ (Language Integrated Query) with the Method Syntax or Query Syntax to access DataBase
-Front end:JavaScript,HTML,CSS
+Front-end:JavaScript,HTML,CSS
 Libraries: jQuery
 
 
 
 
----------------------------------------------------
+----------------------------------------------------------------------------------------------
 This application is an interactive web application, contains many tests for various levels.
 Each user to participate in those tests should register and login. A theoretical section covers
 this tutorial and also statistics calculator which a user can insert random numbers and view the 
