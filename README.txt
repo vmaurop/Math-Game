@@ -1,9 +1,12 @@
 # Math-Game
 Interactive Math Tutorial Statistics-Probabilities
 
-IDE:Microsoft Visual Studio Enterprise 2015
+url: http://learnstatistics.azurewebsites.net/ 
 
-Architectural pattern: framework ASP.NET MVC(Model-View-Controller ) 
+
+IDE:Microsoft Visual Studio Enterprise 2015
+Cloud service: Microsoft Azure
+Architectural pattern: framework ASP.NET MVC(Model-View-Controller) 
 Entity  Framework 6.2.0
 RDMS: Microsoft SQL Server (T-SQL)
 Back-end: C#
