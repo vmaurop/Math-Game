@@ -1,7 +1,7 @@
 # Math-Game
 Interactive Math Tutorial Statistics-Probabilities
 
-url: http://learnstatistics.azurewebsites.net/ 
+Web Hosting: http://learnstatistics.azurewebsites.net/ 
 
 
 IDE:Microsoft Visual Studio Enterprise 2015
