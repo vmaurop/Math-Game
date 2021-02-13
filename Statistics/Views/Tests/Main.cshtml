@@ -13,38 +13,102 @@
     <link rel="stylesheet" href="~/Style/Tests.css" />
 </head>
 
+@{
 
-<div id="level1">
-    <div class="circle" onclick="location.href='@Url.Action("TestLevel1", "Tests")'">
-        <p>Level 1</p>
+    Statistics.Models.UserDatabaseEntities user = new Statistics.Models.UserDatabaseEntities();
+    var userId = Session["UserId"].ToString();
+    var completedLevel1 = user.Level_1.Where(a => a.UserId.ToString() == userId && a.Completed == true).FirstOrDefault();
+    var completedLevel2 = user.Level_2.Where(a => a.UserId.ToString() == userId && a.Completed == true).FirstOrDefault();
+    var completedLevel3 = user.Level_3.Where(a => a.UserId.ToString() == userId && a.Completed == true).FirstOrDefault();
+    var completedLevel4 = user.Level_4.Where(a => a.UserId.ToString() == userId && a.Completed == true).FirstOrDefault();
+    var completedLevel5 = user.Level_5.Where(a => a.UserId.ToString() == userId && a.Completed == true).FirstOrDefault();
+    <div id="user">
+        <h2>
+            @Session["FirstName"].ToString() @Session["LastName"].ToString()<br>
+        </h2>
+        <p style="text-align:left">@Session["Email"].ToString()</p><br><br>
+        <p style="text-align:left">Completed<br>
+            @{ if (completedLevel1 == null)
+                {
+                    <b>Level1:&#10060;</b><br>
+                }
+                else
+                {
+                    <b>Level1:&#9989;</b><br>
+                }
+                if (completedLevel2 == null)
+                {
+                    <b>Level2:&#10060;</b><br>
+                }
+                else
+                {
+                    <b>Level2:&#9989;</b><br>
+                }
+                if (completedLevel3 == null)
+                {
+                    <b>Level3:&#10060;</b><br>
+                }
+                else
+                {
+                    <b>Level3:&#9989;</b><br>
+                }
+                if (completedLevel4 == null)
+                {
+                    <b>Level4:&#10060;</b><br>
+                }
+                else
+                {
+                    <b>Level4:&#9989;</b><br>
+                }
+                if (completedLevel5 == null)
+                {
+                    <b>Level5:&#10060;</b><br>
+                }
+                else
+                {
+                    <b>Level5:&#9989;</b><br>
+                }
+          
+            }
     </div>
-</div>
-<div id="level2">
-    <div class="circle" onclick="location.href='@Url.Action("TestLevel2", "Tests")'">
-        <p>Level 2</p>
-    </div>
-</div>
-<div id="level3">
-    <div class="circle" onclick="location.href='@Url.Action("TestLevel3", "Tests")'">
-        <p>Level 3<p>
-    </div>
-</div>
-<div id="level4">
-    <div class="circle" onclick="location.href='@Url.Action("TestLevel4", "Tests")'">
-        <p>Level 4</p>
-    </div>
-</div>
-<div id="level5" onclick="location.href='@Url.Action("TestLevel5", "Tests")'">
-    <div class="circle">
-        <p>Level 5</p>
-    </div>
-    <br>
-</div>
 
-<div class="Certificate" onclick="location.href='@Url.Action("CertifiedUsers", "Home")'">
-    <div class="circle">
-        <p>Certificate</p>
+}
+<div id="MainTest">
+
+
+    <div id="level1">
+        <div class="circle" onclick="location.href='@Url.Action("TestLevel1", "Tests")'">
+            <p>Level 1</p>
+        </div>
     </div>
+    <div id="level2">
+        <div class="circle" onclick="location.href='@Url.Action("TestLevel2", "Tests")'">
+            <p>Level 2</p>
+        </div>
+    </div>
+    <div id="level3">
+        <div class="circle" onclick="location.href='@Url.Action("TestLevel3", "Tests")'">
+            <p>Level 3<p>
+        </div>
+    </div>
+    <div id="level4">
+        <div class="circle" onclick="location.href='@Url.Action("TestLevel4", "Tests")'">
+            <p>Level 4</p>
+        </div>
+    </div>
+    <div id="level5" onclick="location.href='@Url.Action("TestLevel5", "Tests")'">
+        <div class="circle">
+            <p>Level 5</p>
+        </div>
+        <br>
+    </div>
+
+    <div class="Certificate" onclick="location.href='@Url.Action("CertifiedUsers", "Home")'">
+        <div class="circle">
+            <p>Certified Users</p>
+        </div>
+    </div>
+
 </div>
 
 

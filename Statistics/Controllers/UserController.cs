@@ -27,10 +27,7 @@ namespace Statistics.Controllers
             // Model Validation 
             if (ModelState.IsValid && !IsEmailExist(user.Email))
             {
-                //  Crypto passHack = new Crypto();
-                //  user.Password = passHack.Hash(user.Password);
-                //user.ConfirmPassword = passHack.Hash(user.ConfirmPassword);
-
+                
                 if(user.Password != user.ConfirmPassword)
                 {
                     ModelState.AddModelError("", "Confirm password and password does not match");
@@ -65,12 +62,12 @@ namespace Statistics.Controllers
             using (UserDatabaseEntities dc = new UserDatabaseEntities())
             {
                 var v = dc.User.Where(a => a.Email == login.Email && a.Password == login.Password).FirstOrDefault();
-            //    var c = dc.User.Where(a => a.Password == login.Password).FirstOrDefault();
                 if(v != null) {
                     Session["UserId"] = v.UserId;
                     Session["FirstName"] = v.FirstName;
                     Session["Email"] = v.Email;
-                    
+                    Session["LastName"] = v.LastName;
+
                     return RedirectToAction("Index", "Home");
                 }
             }

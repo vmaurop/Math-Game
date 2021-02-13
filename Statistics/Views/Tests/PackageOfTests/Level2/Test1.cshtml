@@ -16,7 +16,7 @@
     <form id="Test1" method="post" runat="server">
         <div class="questions">
 
-            <div class="question1">
+            <div class="question">
                 <br><b>What is the average of these numbers -10,-1,-19,-19.3,-8.9,10?</b>
                 <div class="answers1">
                     <div class="answer1">
@@ -39,11 +39,11 @@
             </div>
 
 
-            <div class="question2">
-                <br><b>A die is thrown twice the same time. What is the probability that the score is {4,4}?</b>
+            <div class="question">
+                <br><b>Two dice are thrown twice the same time. What is the probability that the score is {4,4}?</b>
                 <div class="answers2">
                     <div class="answer1">
-                        <input type="radio" name="question-2-answer-A" id="2-A" value="A" />
+                        <input type="radio" name="question-2-answers-A" id="2-A" value="A" />
                         <label for="question-2-answers-A">1/18</label>
                     </div>
                     <div class="answer2">
@@ -62,8 +62,8 @@
             </div>
 
 
-            <div class="question3">
-                <br><b>A die is thrown twice the same time. What is the probability that the score is 1 and whatever?</b>
+            <div class="question">
+                <br><b>Two dice is thrown twice the same time. What is the probability that the score is 1 and whatever?</b>
                 <div class="answers3">
                     <div class="answer1">
                         <input type="radio" name="question-3-answers-A" id="3-A" value="A" />
@@ -79,35 +79,35 @@
                     </div>
                     <div class="answer4">
                         <input type="radio" name="question-3-answers-D" id="3-D" value="D" />
-                        <label for="question-2-answers-D">1/9</label>
+                        <label for="question-3-answers-D">1/9</label>
                     </div>
                 </div>
             </div>
 
 
-            <div class="question4">
+            <div class="question">
                 <br><b>P = { x ∈Z | -1 ≤ x ≤ 1} What is the complement of P?</b>
                 <div class="answers4">
                     <div class="answer1">
                         <input type="radio" name="question-4-answers-A" id="4-A" value="A" />
-                        <label for="question-2-answers-A">All Z ecxept [-1,1]</label>
+                        <label for="question-4-answers-A">All Z ecxept [-1,1]</label>
                     </div>
                     <div class="answer2">
                         <input type="radio" name="question-4-answers-B" id="4-B" value="B" />
-                        <label for="question-2-answers-B">{-1,0,1}</label>
+                        <label for="question-4-answers-B">{-1,0,1}</label>
                     </div>
                     <div class="answer3">
                         <input type="radio" name="question-4-answers-C" id="4-C" value="C" />
-                        <label for="question-2-answers-C">1</label>
+                        <label for="question-4-answers-C">1</label>
                     </div>
                     <div class="answer4">
                         <input type="radio" name="question-4-answers-D" id="4-D" value="D" />
-                        <label for="question-2-answers-D">Not defined</label>
+                        <label for="question-4-answers-D">Not defined</label>
                     </div>
                 </div>
             </div>
 
-            <div class="question5">
+            <div class="question">
                 <br><b>C = { x ∈Z | 5 ≤ x ≤ 8},  F = { x ∈Z | 3 ≤ x ≤ 7}. What is C ∩ F?</b>
                 <div class="answers5">
                     <div class="answer1">
@@ -131,8 +131,8 @@
         </div>
         <br>
         <br>
-        <input type="submit" onclick="validateTest();" value="submit" name="submit" class="button" /> 
-        <input type="reset" value="Reset" class="button"/>
+        <input type="submit" onclick="validateTest();" value="submit" name="submit" class="button" />
+        <input type="reset" value="Reset" class="button" />
     </form>
 </body>
 </html>

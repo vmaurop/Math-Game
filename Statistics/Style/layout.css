@@ -7,7 +7,7 @@
 /* menu bar inherit all */
 
 .navbar-inverse {
-    background-color: #3B5998;
+    background-color:#3B5998;
     /* margin-top: 3em; */
     /* margin-left: 3em;
 margin-right: 3em; */
@@ -15,7 +15,7 @@ margin-right: 3em; */
 
     .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
         color: white;
-        background-color: #3B5998;
+        background-color:#3B5998;
     }
 
     .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
@@ -24,15 +24,16 @@ margin-right: 3em; */
     }
 
 #bs-example-navbar-collapse-1 {
-    background-color: #3B5998;
+    background-color:#3B5998;
     color: white;
-    /* margin-top: 3em;
-/* margin-left: 3em;
-margin-right: 3em; */ */;
 }
 
 .dropdown-menu > li > a:hover {
     background-color: #3B5998;
+}
+
+.dropdown .dropdown-menu {
+    background-color:white;
 }
 
 /* ------------------------------------------------------------------------------------------------------------ */

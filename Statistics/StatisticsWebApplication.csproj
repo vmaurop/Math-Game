@@ -151,6 +151,7 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\clearAction.js" />
+    <Content Include="scripts\deselectRadioButtons.js" />
     <Content Include="scripts\getInRandomOrderQuestionsAndAnswers.js" />
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
@@ -159,7 +160,9 @@
     <Content Include="scripts\validateTests.js" />
     <Content Include="Style\layout.css" />
     <Content Include="Style\Tests.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -170,6 +173,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Extended\User.cs" />
     <Compile Include="Models\Level_1.cs">
       <DependentUpon>MyModel.tt</DependentUpon>
@@ -222,7 +226,9 @@
     <Content Include="Models\MyModel.edmx.diagram">
       <DependentUpon>MyModel.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\LearnStatistics - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\LearnStatistics - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\LearnStatistics - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\LearnStatistics - Web Deploy.pubxml" />
     <Content Include="Views\User\LoginForm.cshtml" />
     <Content Include="Views\User\RegistrationForm.cshtml" />

@@ -9,7 +9,7 @@
 
     //invalid input...
     for (var i in x) {
-        if (Number.isNaN(x[i]) || (x[i] == "")) {
+        if (Number.isNaN(x[i]) || (x[i] === "")) {
             alert("Incorrect input data");
             exit();
         }
@@ -34,8 +34,6 @@
         med = x[parseInt(x.length / 2)]; 
 
     }
-
-
 
     //variance
     var sumS = 0;
@@ -63,8 +61,6 @@
         if (count.hasOwnProperty(i) && count[i] === maxIndex) {
             modes.push(Number(i));
         }
-
-
 
 
     $("#max").html("<b>Maximum:</b> " + Math.max.apply(Math, x));   
